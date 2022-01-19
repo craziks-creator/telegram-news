@@ -56,7 +56,7 @@ def default_policy(item, max_len=1000, max_par_num=15):
         po += '[' + item['source'] + ']' + ' '
 
     if item['link']:
-        po += '<a href=\"' + item['link'] + '\">[For above official notice link or pdf click here]</a>'
+        po += <button><a href=\"' + item['link'] + '\">For above official notice link or pdf click here</a></button>'
 
     po = po.replace('<br>', "")
 
@@ -85,7 +85,7 @@ def best_effort_display_policy(item, max_len=1000, max_par_num=15, suffix='...')
     disable_web_page_preview = 'True'
 
     full = '<b>' + item['title'] + '</b>\n\n' + item['paragraphs'] + item['time'] + '\n' + \
-           '[' + item['source'] + ']' + '<a href=\"' + item['link'] + '\">[For above official notice link or pdf click here]</a>' + ' '
+           '[' + item['source'] + ']' + '<button><a href=\"' + item['link'] + '\">For above official notice link or pdf click here</a></button>' + ' '
 
     # po is the text we want to post
     po = ""
@@ -123,7 +123,7 @@ def best_effort_display_policy(item, max_len=1000, max_par_num=15, suffix='...')
         po += '[' + item['source'] + ']' + ' '
 
     if item['link']:
-        po += '<a href=\"' + item['link'] + '\">[For above official notice, link or pdf click here]</a>'
+        po += '<button><a href=\"' + item['link'] + '\">For above official notice, link or pdf click here</a></button>'
 
     po = po.replace('<br>', "")
 
